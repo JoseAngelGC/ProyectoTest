@@ -1,0 +1,133 @@
+.contenedor {
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+	color: white;
+
+	/*GRID CSS*/
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	gap: 20px;
+}
+
+.titulo {
+	font-size: 24px;
+	padding: 20px 0;
+}
+
+.contenedor-conciertos {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	gap: 20px;
+}
+
+.card {
+	border-radius: 10px;
+	min-height: 200px;
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+	padding: 20px;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+}
+
+.card .textos {
+	height: 100%;
+	width: 100%;
+	display:flex;
+	flex-direction:column-reverse;
+	text-align: center;
+}
+
+.banner {
+	border-radius: 10px;
+	text-align: center;
+	padding: 20px;
+	background-size: cover;
+	background-position: center center;
+
+
+}
+
+.title-banner{
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.banner ul {
+	list-style: none;
+}
+
+.banner ul li {
+	margin: 15px;
+	font-size: 1rem;
+}
+
+.banner .boton {
+	background: #FFD600;
+	display: block;
+	width: 100%;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	padding: 10px;
+	border: none;
+	border-radius: 100px;
+	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 960px) {
+	.contenedor {
+		grid-template-columns: 2fr 1fr;
+		gap: 10px;
+	}
+
+	.contenedor-conciertos {
+		grid-template-columns: repeat(2,1fr);
+		gap: 10px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.contenedor {
+		width: 96%;
+	}
+
+	.contenedor-conciertos {
+		grid-template-columns: repeat(2,1fr);
+		gap: 10px;
+	}
+
+	.banner ul li {
+		margin: 5px;
+		font-size: 0.7rem;
+	}
+
+	.title-banner{
+		font-size: 0.8rem;
+	}
+
+}
+
+@media only screen and (max-width: 540px) {
+	.contenedor {
+		grid-template-columns: 1fr 1fr;
+		gap: 5px;
+	}
+
+	.contenedor-conciertos {
+		grid-template-columns: repeat(1,1fr);
+	}
+
+	.banner {
+		padding: 10px;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.contenedor {
+		grid-template-columns: repeat(1,1fr);
+	}
+}
